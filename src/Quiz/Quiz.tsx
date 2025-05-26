@@ -6,26 +6,21 @@ export function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const question = [
     {
-      question: "리액트를 만든 회사는?",
-      options: ["페이스북", "구글", "네이버", "카카오"],
-      answer: "페이스북",
+      question: "리액트를 만든 곳은은?",
+      options: ["메타", "구글", "넥슨", "애플"],
+      answer: "메타",
     },
     {
-      question: "타입스크립트는 어떤 언어의 슈퍼셋인가요?",
+      question: "타입스크립트는 어떤 언어의 슈퍼셋인가?",
       options: ["자바스크립트", "파이썬", "루비", "코틀린"],
       answer: "자바스크립트",
-    },
-    {
-      question: "TSX는 무엇을 확장한 파일 형식인가요요?",
-      options: ["js", "html", "css", "ts"],
-      answer: "ts",
     },
   ];
 
   const handleAnswer = (answer: string) => {
     if (answer === question[currentQuestion].answer) {
       setScore(score + 1);
-      console.log("정답!!" + score);
+      console.log("정답" + score);
     } else {
       console.log("오답!!");
     }
@@ -41,7 +36,9 @@ export function Quiz() {
         ></Question>
       ) : (
         <>
-          <h2> 당신의 최종 점수는 {score} 입니다. </h2>
+          <h2>
+            당신은 {question.length}개 중 {score}개를 맞혔습니다.
+          </h2>
           <button
             onClick={() => {
               setScore(0);

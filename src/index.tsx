@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 //import App from "./App";
 //import { Counter } from "./Counter/Counter";
-import { Quiz } from "./Quiz/Quiz";
+//import { Quiz } from "./Quiz/Quiz";
+import { Todolist } from "./Todolist/Todolist";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -11,7 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Quiz />
+    <Todolist />
   </React.StrictMode>,
 );
 
